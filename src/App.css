@@ -14,6 +14,9 @@
 	box-shadow: 0 0 10px #000;
 }
 
+input::placeholder {
+	color: #EBD3EC
+}
 
 .modal {
 	width: 90%;
@@ -50,7 +53,7 @@
 * {
 	font-family: 'Raleway';
 	box-sizing: border-box;
-	color: #EBD3EC;
+	color: #65096B;
 }
 
 .input-wrapper {
@@ -109,12 +112,18 @@ form {
 	width: 100%
 }
 
-.StepFirst, .StepSecond, .StepThird {
-	width: 100%
+.StepFirst, .StepSecond, .StepThird, .fields-wrapper {
+	width: 100%;
+	/* display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column */
 }
 
 .values{
-	font-size: 20px; padding: 5px 0
+	font-size: 20px; 
+	padding: 5px 0;
+	color: #EBD3EC
 }
 
 .buttons {

@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checking the ReduxForm Component 1`] = `
+<div
+  className="FormikForm"
+>
+  <div
+    className="FormikForm-wrapper"
+  >
+    <div
+      className="modal"
+    >
+      <div
+        className="intro"
+      >
+        <div
+          className="circle"
+        >
+          ✧
+        </div>
+        <div
+          className="title"
+        >
+          authentication
+        </div>
+      </div>
+      <form
+        onReset={[Function]}
+        onSubmit={[Function]}
+      >
+        <div
+          className="error"
+        />
+        <div
+          className="StepFirst"
+        >
+          <div
+            className="fields-wrapper"
+          >
+            <div
+              className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root WithStyles(ForwardRef(TextField))-root-1"
+            >
+              <label
+                className="MuiFormLabel-root Mui-required Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="outlined-required"
+              >
+                email
+                <span
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-55 MuiOutlinedInput-notchedOutline"
+                  style={
+                    Object {
+                      "paddingLeft": 8,
+                    }
+                  }
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legend-56"
+                    style={
+                      Object {
+                        "width": 0.01,
+                      }
+                    }
+                  >
+                    <span
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "&#8203;",
+                        }
+                      }
+                    />
+                  </legend>
+                </fieldset>
+                <input
+                  aria-invalid={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="outlined-required"
+                  name="email"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={true}
+                  type="email"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="fields-wrapper"
+          >
+            <div
+              className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root WithStyles(ForwardRef(TextField))-root-1"
+            >
+              <label
+                className="MuiFormLabel-root Mui-required Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="outlined-required"
+              >
+                password
+                <span
+                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-55 MuiOutlinedInput-notchedOutline"
+                  style={
+                    Object {
+                      "paddingLeft": 8,
+                    }
+                  }
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legend-56"
+                    style={
+                      Object {
+                        "width": 0.01,
+                      }
+                    }
+                  >
+                    <span
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "&#8203;",
+                        }
+                      }
+                    />
+                  </legend>
+                </fieldset>
+                <input
+                  aria-invalid={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="outlined-required"
+                  name="password"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={true}
+                  type="password"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="buttons"
+        >
+          <div />
+          <button
+            disabled={false}
+            type="submit"
+          >
+            next ↪
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test redux custom field 1`] = `
+<div
+  className="fields-wrapper"
+>
+  <div
+    className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root WithStyles(ForwardRef(TextField))-root-57"
+  >
+    <div
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root-55 MuiOutlinedInput-notchedOutline"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="PrivateNotchedOutline-legend-56"
+          style={
+            Object {
+              "width": 0.01,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input MuiOutlinedInput-input"
+        disabled={false}
+        id="outlined-required"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={true}
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test redux custom field 2`] = `
+<div
+  className="fields-wrapper"
+>
+  <div
+    className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root WithStyles(ForwardRef(TextField))-root-57"
+  >
+    <div
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root-55 MuiOutlinedInput-notchedOutline"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="PrivateNotchedOutline-legend-56"
+          style={
+            Object {
+              "width": 0.01,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input MuiOutlinedInput-input"
+        disabled={false}
+        id="outlined-required"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={true}
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`app test 1`] = `ShallowWrapper {}`;

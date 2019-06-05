@@ -18,22 +18,32 @@ import React, { Component } from "react";
 import "./App.css";
 import ReduxForm from "./reduxform";
 import FormikForm from "./formik";
+import  store from './store'
+import { Provider } from 'react-redux'
 
 class App extends Component {
     state = {
         render: 0
-    }
-    
+    };
+
     render() {
         return (
             <div className="App">
-               { !this.state.render && <> <button onClick={() => this.setState({render: 1})}>ReduxForm</button>
-                <button onClick={() => this.setState({render: 2})}>Formik</button> </>}
-                {this.state.render === 1 && <ReduxForm/>}
-                {this.state.render === 2 && <FormikForm/>}
-
+                {!this.state.render && (
+                    <>
+                        {" "}
+                        <button id="a" onClick={() => this.setState({ render: 1 })}>
+                            ReduxForm
+                        </button>
+                        <button id="b" onClick={() => this.setState({ render: 2 })}>
+                            Formik
+                        </button>{" "}
+                    </>
+                )}
+                {this.state.render === 1 &&  <Provider  store={store}><ReduxForm /></Provider>}
+                {this.state.render === 2 && <FormikForm />}
             </div>
         );
     }
 }
-export default App
+export default App;

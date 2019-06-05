@@ -1,29 +1,28 @@
 import React, { Component } from "react";
 import { Field } from "redux-form";
+import field from './fieldRedux';
 
 
 class StepFirst extends Component {
     render() {
         return (
             <div className="StepFirst">
-                <div className="input-wrapper">
                     <Field
                         name="email"
-                        component="input"
+                        component={field}
                         label="Email"
                         type="email"
-                        requaired="true"
+                        className="field"
                     />
-                </div>
-                <div className="input-wrapper">
+
                     <Field
                         name="password"
-                        component="input"
+                        component={field}
                         label="Password"
                         type="password"
-                        requaired="true"
+                        className="field"
                     />
-                </div>
+
             </div>
         );
     }

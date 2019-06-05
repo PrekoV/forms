@@ -9,6 +9,26 @@ export default class FormikForm extends Component {
     state = {
         step: 1
     };
+    submit = (values, actions) => {
+        values && actions.setSubmitting(false);
+        switch (this.state.step) {
+            case 1:
+                this.setState({
+                    step: this.state.step + 1
+                });
+                break;
+            case 2:
+                this.setState({
+                    step: this.state.step + 1
+                });
+                break;
+            case 3:
+                break;
+            default:
+                console.log("no one knows");
+                break;
+        }
+    }
     render() {
         console.log(this.state);
         return (
@@ -26,107 +46,43 @@ export default class FormikForm extends Component {
                             <div className="title">authentication</div>
                         </div>
                         <Formik
-                            //   initialValues={user /** { email, social } */}
-                            onSubmit={(values, actions) => {
-                                values && actions.setSubmitting(false);
-                                //this.props.dispatch(addProduct(values));
-                                // MyImaginaryRestApiCall(user.id, values).then(
-                                //   updatedUser => {
-                                // 	actions.setSubmitting(false);
-                                // 	updateUser(updatedUser);
-                                // 	onClose();
-                                //   },
-                                //   error => {
-                                // 	actions.setSubmitting(false);
-                                // 	actions.setErrors(transformMyRestApiErrorsToAnObject(error));
-                                // 	actions.setStatus({ msg: 'Set some arbitrary status or data' });
-                                //   }
-                                // );
-                                console.log(values, actions);
-                                switch (this.state.step) {
-                                    case 1:
-                                        // if (values.email && values.password) {
-                                        //     if (values.password.length < 5) {
-                                        //         this.setState({
-                                        //             error:
-                                        //                 "Password is too short!"
-                                        //         });
-                                        //     } else {
-                                                console.log(
-                                                    "submit first",
-                                                    values
-                                                );
-                                                this.setState({
-                                                    step: this.state.step + 1,
-                                                    
-                                                });
-                                        //     }
-                                        // } else {
-                                        //     this.setState({
-                                        //         error:
-                                        //             "You have to fill email and password!"
-                                        //     });
-                                        // }
-                                        break;
-                                    case 2:
-                                        // if (
-                                        //     values.country &&
-                                        //     values.company &&
-                                        //     values.date
-                                        // ) {
-                                            console.log(
-                                                "submit second",
-                                                values
-                                            );
-                                            this.setState({
-                                                step: this.state.step + 1,
-                                               
-                                            });
-                                        // } else {
-                                        //     this.setState({
-                                        //         error:
-                                        //             "You have to fill country, company and password!"
-                                        //     });
-                                        // }
-                                        break;
-                                    case 3:
-                                        console.log("submit all!", values);
-                                        break;
-                                    default:
-                                        console.log("no one knows");
-                                        break;
-                                }
-                            }}
+                            onSubmit={(values, actions) => this.submit(values, actions)}
                             initialValues={{
                                 email: "",
                                 password: "",
                                 company: "",
-                                country: "Choose country",
-								date: "",
-								err: ""
+                                country: "",
+                                date: ""
                             }}
                             validate={values => {
-								let errors = {};
-								console.log(!values.email || !values.password)
-                                if (!values.email || !values.password) {
-									console.log("hhhhhhhhhhhh")
-                                    errors.err = "You have to fill email and password!";
-                                } else if (
-                                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
-                                        values.email
-                                    )
-                                ) {
-                                    errors.err = "Invalid email address";
-                                } else if (values.password.length < 5) {
-                                    errors.err = "Password is too short!";
-                                } else if (
-                                    this.state.step === 2 &&
-                                    (!values.country ||
-                                        !values.company ||
-                                        !values.date)
-                                ) {
-                                    errors.err =
-                                        "You have to fill country, company and password!";
+                                let errors = {};
+                                switch (this.state.step) {
+                                    case 1:
+                                        if (!values.email) {
+                                            errors.email =
+                                                "You have to input your e-mail!";
+                                        } else if (!values.password) {
+                                            errors.password =
+                                                "You have to input your password!";
+                                        } else if (values.password.length < 5) {
+                                            errors.password =
+                                                "Password is too short!";
+                                        }
+                                        break;
+                                    case 2:
+                                        if (!values.country) {
+                                            errors.country =
+                                                "country cannot be empty!";
+                                        } else if (!values.company) {
+                                            errors.company =
+                                                "company cannot be empty!";
+                                        } else if (!values.date) {
+                                            errors.date =
+                                                "date cannot be empty!";
+                                        }
+                                        break;
+                                    default:
+                                        console.log("default");
                                 }
                                 return errors;
                             }}
@@ -156,14 +112,18 @@ export default class FormikForm extends Component {
                                     <div className="buttons">
                                         {this.state.step !== 1 ? (
                                             <button
-                                                // disabled={isSubmitting}
                                                 onClick={() =>
                                                     this.state.step !== 1
-                                                        ? this.setState({
-                                                              step:
-                                                                  this.state
-                                                                      .step - 1
-                                                          })
+                                                        ? this.state.step === 3
+                                                            ? this.setState({
+                                                                  step: 1
+                                                              })
+                                                            : this.setState({
+                                                                  step:
+                                                                      this.state
+                                                                          .step -
+                                                                      1
+                                                              })
                                                         : {}
                                                 }
                                             >
